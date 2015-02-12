@@ -9,12 +9,8 @@ import org.pac4j.core.context.WebContext;
 import org.pac4j.oauth.client.BaseOAuth20Client;
 import org.scribe.builder.ServiceBuilder;
 import org.scribe.builder.api.DefaultApi20;
-import org.scribe.model.OAuthConfig;
-import org.scribe.model.SignatureType;
 import org.scribe.model.Token;
-import org.scribe.oauth.OAuth20ServiceImpl;
 import org.scribe.oauth.OAuthService;
-import org.scribe.oauth.StateOAuth20ServiceImpl;
 
 import java.io.IOException;
 
@@ -44,6 +40,7 @@ public class IplantClient extends BaseOAuth20Client<IplantProfile> {
     protected void internalInit() {
         super.internalInit();
         service = createService();
+        setTokenAsHeader(true);
     }
 
     protected OAuthService createService() {
@@ -52,7 +49,6 @@ public class IplantClient extends BaseOAuth20Client<IplantProfile> {
                 .apiKey(getKey())
                 .apiSecret(getSecret())
                 .callback(getCallbackUrl())
-                .signatureType(SignatureType.Header)
                 .scope("openid")
                 .debug()
                 .build();
