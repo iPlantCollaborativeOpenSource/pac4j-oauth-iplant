@@ -1,6 +1,7 @@
 package org.iplantc.core.pac4j.oauth.profile.iplant;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.iplantc.core.pac4j.oauth.api.IplantApi;
 import org.pac4j.core.profile.AttributesDefinition;
 import org.pac4j.oauth.profile.OAuth20Profile;
 
@@ -27,5 +28,14 @@ public class IplantProfile extends OAuth20Profile {
 
     public void setPreferredUsername(String preferredUsername) {
         addAttribute(IplantAttributesDefinition.PREFERRED_USERNAME, preferredUsername);
+    }
+
+    @JsonProperty(IplantAttributesDefinition.EMAIL)
+    public String getEmail() {
+        return (String) getAttribute(IplantAttributesDefinition.EMAIL);
+    }
+
+    public void setEmail(String email) {
+        addAttribute(IplantAttributesDefinition.EMAIL, email);
     }
 }

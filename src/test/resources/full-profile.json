@@ -1,4 +1,5 @@
 {
-  "username": "ipctest",
-  "preferred_username": "Ipc Test"
+  "sub": "ipctest",
+  "preferred_username": "Ipc Test",
+  "email": "ipctest@iplantcollaborative.org"
 }
