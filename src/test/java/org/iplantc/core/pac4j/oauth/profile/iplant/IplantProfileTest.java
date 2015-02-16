@@ -22,6 +22,9 @@ public class IplantProfileTest {
         IplantProfile profile = objectMapper.readValue(openResource("full-profile.json"), IplantProfile.class);
         assertEquals("correct username", "ipctest", profile.getUsername());
         assertEquals("correct preferred username", "Ipc Test", profile.getPreferredUsername());
+        assertEquals("correct email address", "ipctest@iplantcollaborative.org", profile.getEmail());
+        assertEquals("correct full name", "Ipc Test", profile.getFullName());
+        assertEquals("correct last name", "Test", profile.getLastName());
     }
 
     @Test
@@ -29,6 +32,9 @@ public class IplantProfileTest {
         IplantProfile profile = objectMapper.readValue(openResource("no-username.json"), IplantProfile.class);
         assertNull("null username", profile.getUsername());
         assertEquals("correct preferred username", "Ipc Test", profile.getPreferredUsername());
+        assertEquals("correct email address", "ipctest@iplantcollaborative.org", profile.getEmail());
+        assertEquals("correct full name", "Ipc Test", profile.getFullName());
+        assertEquals("correct last name", "Test", profile.getLastName());
     }
 
     @Test
@@ -36,5 +42,8 @@ public class IplantProfileTest {
             IplantProfile profile = objectMapper.readValue(openResource("unknown-properties.json"), IplantProfile.class);
         assertEquals("correct username", "ipctest", profile.getUsername());
         assertEquals("correct preferred useranme", "Ipc Test", profile.getPreferredUsername());
+        assertEquals("correct email address", "ipctest@iplantcollaborative.org", profile.getEmail());
+        assertEquals("correct full name", "Ipc Test", profile.getFullName());
+        assertEquals("correct last name", "Test", profile.getLastName());
     }
 }

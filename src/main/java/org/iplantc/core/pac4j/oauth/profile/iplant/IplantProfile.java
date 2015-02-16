@@ -17,7 +17,7 @@ public class IplantProfile extends OAuth20Profile {
         return (String) getAttribute(IplantAttributesDefinition.USERNAME);
     }
 
-    public void setUsername(String username) {
+    public void setUsername(final String username) {
         addAttribute(IplantAttributesDefinition.USERNAME, username);
     }
 
@@ -26,7 +26,7 @@ public class IplantProfile extends OAuth20Profile {
         return (String) getAttribute(IplantAttributesDefinition.PREFERRED_USERNAME);
     }
 
-    public void setPreferredUsername(String preferredUsername) {
+    public void setPreferredUsername(final String preferredUsername) {
         addAttribute(IplantAttributesDefinition.PREFERRED_USERNAME, preferredUsername);
     }
 
@@ -35,7 +35,25 @@ public class IplantProfile extends OAuth20Profile {
         return (String) getAttribute(IplantAttributesDefinition.EMAIL);
     }
 
-    public void setEmail(String email) {
+    public void setEmail(final String email) {
         addAttribute(IplantAttributesDefinition.EMAIL, email);
+    }
+
+    @JsonProperty(IplantAttributesDefinition.FULL_NAME)
+    public String getFullName() {
+        return (String) getAttribute(IplantAttributesDefinition.FULL_NAME);
+    }
+
+    public void setFullName(final String fullName) {
+        addAttribute(IplantAttributesDefinition.FULL_NAME, fullName);
+    }
+
+    @JsonProperty(IplantAttributesDefinition.LAST_NAME)
+    public String getLastName() {
+        return (String) getAttribute(IplantAttributesDefinition.LAST_NAME);
+    }
+
+    public void setLastName(final String lastName) {
+        addAttribute(IplantAttributesDefinition.LAST_NAME, lastName);
     }
 }

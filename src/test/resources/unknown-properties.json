@@ -2,6 +2,8 @@
   "sub": "ipctest",
   "preferred_username": "Ipc Test",
   "email": "ipctest@iplantcollaborative.org",
+  "given_name": "Ipc Test",
+  "family_name": "Test",
   "foo": "foo",
   "bar": "bar",
   "baz": "baz"
