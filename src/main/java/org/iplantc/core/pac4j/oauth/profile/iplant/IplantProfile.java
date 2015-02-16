@@ -1,7 +1,6 @@
 package org.iplantc.core.pac4j.oauth.profile.iplant;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.iplantc.core.pac4j.oauth.api.IplantApi;
 import org.pac4j.core.profile.AttributesDefinition;
 import org.pac4j.oauth.profile.OAuth20Profile;
 
