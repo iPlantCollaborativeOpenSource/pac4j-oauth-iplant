@@ -25,6 +25,7 @@ public class IplantProfileTest {
         assertEquals("correct email address", "ipctest@iplantcollaborative.org", profile.getEmail());
         assertEquals("correct full name", "Ipc Test", profile.getFullName());
         assertEquals("correct last name", "Test", profile.getLastName());
+        assertEquals("correct first name", "Ipc", profile.getFirstName());
     }
 
     @Test
@@ -35,6 +36,7 @@ public class IplantProfileTest {
         assertEquals("correct email address", "ipctest@iplantcollaborative.org", profile.getEmail());
         assertEquals("correct full name", "Ipc Test", profile.getFullName());
         assertEquals("correct last name", "Test", profile.getLastName());
+        assertEquals("correct first name", "Ipc", profile.getFirstName());
     }
 
     @Test
@@ -45,5 +47,6 @@ public class IplantProfileTest {
         assertEquals("correct email address", "ipctest@iplantcollaborative.org", profile.getEmail());
         assertEquals("correct full name", "Ipc Test", profile.getFullName());
         assertEquals("correct last name", "Test", profile.getLastName());
+        assertEquals("correct first name", "Ipc", profile.getFirstName());
     }
 }

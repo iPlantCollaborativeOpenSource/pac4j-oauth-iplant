@@ -56,4 +56,13 @@ public class IplantProfile extends OAuth20Profile {
     public void setLastName(final String lastName) {
         addAttribute(IplantAttributesDefinition.LAST_NAME, lastName);
     }
+
+    @JsonProperty(IplantAttributesDefinition.FIRST_NAME)
+    public String getFirstName() {
+        return (String) getAttribute(IplantAttributesDefinition.FIRST_NAME);
+    }
+
+    public void setFirstName(String firstName) {
+        addAttribute(IplantAttributesDefinition.FIRST_NAME, firstName);
+    }
 }
